@@ -47,7 +47,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE BOARD_SEQ = #{boardSeq}
 	</update>
 	
-	<delete id="update" parameterType="int">
+	<delete id="delete" parameterType="int">
 		DELETE FROM T_BOARD
 		WHERE BOARD_SEQ = #{boardSeq}
 	</delete>

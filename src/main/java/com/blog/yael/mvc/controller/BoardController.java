@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.blog.yael.mvc.domain.BoardDTO;
+import com.blog.yael.mvc.domain.Board;
 import com.blog.yael.mvc.service.BoardService;
 
 //게시판 컨트롤러
@@ -26,7 +26,7 @@ public class BoardController {
      * @return
      * */
 	@GetMapping
-	List<BoardDTO> getList(){
+	List<Board> getList(){
 		return boardService.getList();
 	}
 	
@@ -36,7 +36,7 @@ public class BoardController {
      * @return
      * */
 	@GetMapping("/{boardSeq}")
-	BoardDTO get(@PathVariable int boardSeq) {
+	Board get(@PathVariable int boardSeq) {
 		return boardService.get(boardSeq);
 	}
 	
@@ -47,7 +47,7 @@ public class BoardController {
 //	@PutMapping
 //	@PostMapping
 	@GetMapping("/save")
-	void save(BoardDTO board) {
+	void save(Board board) {
 		boardService.save(board);
 	}
 	

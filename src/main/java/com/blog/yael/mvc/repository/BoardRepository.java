@@ -4,20 +4,20 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.blog.yael.mvc.domain.BoardDTO;
+import com.blog.yael.mvc.domain.Board;
 
 //게시판 Repository
 //@author 김예원
 @Repository
 public interface BoardRepository {
 	
-	List<BoardDTO> getList();
+	List<Board> getList();
 	
-	BoardDTO get(int boardSeq);
+	Board get(int boardSeq);
 	
-	void save(BoardDTO board);
+	void save(Board board);
 	
-	void update(BoardDTO board);
+	void update(Board board);
 	
 	void delete(int boardSeq);
 

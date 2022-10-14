@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.blog.yael.mvc.domain.BoardDTO;
+import com.blog.yael.mvc.domain.Board;
 import com.blog.yael.mvc.repository.BoardRepository;
 
 //게시판 서비스
@@ -20,7 +20,7 @@ public class BoardService{
      * 목록 리턴
      * @return
      * */
-	public List<BoardDTO> getList(){
+	public List<Board> getList(){
 		return repository.getList();
 	}
 	
@@ -29,7 +29,7 @@ public class BoardService{
      * @param boardSeq
      * @return
      * */
-	public BoardDTO get(int boardSeq) {
+	public Board get(int boardSeq) {
 		return repository.get(boardSeq);
 	}
 	
@@ -37,7 +37,7 @@ public class BoardService{
      * 등록 처리
      * @param board
      * */
-	public void save(BoardDTO board) {
+	public void save(Board board) {
 		repository.save(board);
 	}
 	
@@ -45,7 +45,7 @@ public class BoardService{
      * 업데이트 처리
      * @param board
      * */
-	public void update(BoardDTO board) {
+	public void update(Board board) {
 		repository.update(board);
 	}
 	
