@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blog.yael.mvc.domain.Board;
@@ -16,6 +17,7 @@ import com.blog.yael.mvc.service.BoardService;
 //게시판 컨트롤러
 //@author 김예원
 @RestController
+@RequestMapping("/board")
 public class BoardController {
 	
 	@Autowired
