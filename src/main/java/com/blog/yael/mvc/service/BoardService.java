@@ -20,7 +20,7 @@ public class BoardService{
      * 목록 리턴
      * @return
      * */
-	List<BoardDTO> getList(){
+	public List<BoardDTO> getList(){
 		return repository.getList();
 	}
 	
@@ -29,7 +29,7 @@ public class BoardService{
      * @param boardSeq
      * @return
      * */
-	BoardDTO get(int boardSeq) {
+	public BoardDTO get(int boardSeq) {
 		return repository.get(boardSeq);
 	}
 	
@@ -37,7 +37,7 @@ public class BoardService{
      * 등록 처리
      * @param board
      * */
-	void save(BoardDTO board) {
+	public void save(BoardDTO board) {
 		repository.save(board);
 	}
 	
@@ -45,7 +45,7 @@ public class BoardService{
      * 업데이트 처리
      * @param board
      * */
-	void update(BoardDTO board) {
+	public void update(BoardDTO board) {
 		repository.update(board);
 	}
 	
@@ -53,7 +53,7 @@ public class BoardService{
      * 삭제 처리
      * @param boardSeq
      * */
-	void delete(int boardSeq) {
+	public void delete(int boardSeq) {
 		repository.delete(boardSeq);
 	}
 
